@@ -1,20 +1,22 @@
-import React from 'react';
-import Item from './Item';
+import Item from './Item'; 
 
-function Menu() {
-  const list = [
-    { link: '/home', content: 'Trang chủ' },
-    { link: '/about', content: 'Sản phẩm' },
-    { link: '/contact', content: 'Liên hệ' }
-  ];
+const Menu = () => {
+    const list = [
+        { link: '/home', content: 'Trang Chủ' },
+        { link: '/about', content: 'Giới Thiệu' },
+        { link: '/contact', content: 'Liên Hệ' },
+        { link: 'lLogin', content: 'Đăng nhập' },
+    ];
 
-  return (
-    <ul>
-      {list.map((item, index) => (
-        <Item key={index} link={item.link} content={item.content} />
-      ))}
-    </ul>
-  );
-}
+    return (
+        <div>
+            <ul>
+                {list.map((item, index) => (
+                    <Item key={index} link={item.link} content={item.content} />
+                ))}
+            </ul>
+        </div>
+    );
+};
 
 export default Menu;
